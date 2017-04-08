@@ -1,0 +1,46 @@
+<div>
+    <div class="appContainer">
+        <div class="sidePane">
+            <div class="center-child bgddd header-height">
+                <h2>
+                    <span class="badge badge-default">Rooms</span>
+                </h2>
+            </div>
+            <div class="roomlist">
+                <button class="btn btn-outline-secondary btn-block" ng-repeat="room in rooms" ng-click="switchRoom(room)">{{room}}</button>
+            </div>
+            <div class="bottom">
+                <button class="btn btn-block" ng-click="createRoom()">Create Room</button>
+            </div>
+        </div>
+        <div class="mainContent">
+            
+            <div class="chatHeader header-height">
+
+                <div class="h1">
+                    <span>Chat App</span>
+                </div>
+                <div class="user-settings">
+                    <div>
+                        <span>Hello {{username}}!</span>
+                    </div>
+                    <a href="/login?q=out">logout</a>
+                </div>
+            </div>
+
+            <div class="chatMessages">
+                You are chatting in <b>{{currentRoom}}</b>
+            </div>
+            
+            <div id="messagelist">
+                <div ng-model="messages" ng-repeat="message in messages track by $index" ng-class="{rightAlign: message.sender == username}"><b>{{message.sender == username ? 'me' : message.sender }}</b>: {{message.message}}</div>
+                <div id="lastmessage"></div>
+            </div>
+            <form id="chatbox" action="javascript:void(0);" class="bottom">
+                <input id="messagespace" autocomplete="off" ng-model="msgSpace"/>
+                <button ng-click="sendMessage()">Send</button>
+            </form>
+            
+        </div>
+    </div>
+</div>

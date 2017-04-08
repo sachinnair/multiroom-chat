@@ -1,0 +1,74 @@
+.appContainer {
+    height: 100vh;
+    display: flex;
+}
+
+.chatHeader {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #eceeef;
+}
+
+.sidePane{
+    height: inherit;
+    width: 300px;
+}
+
+.mainContent {
+    width: 100%;
+}
+
+.center-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bgddd {
+    background-color: #ddd;
+}
+
+.header-height {
+    height: 100px;
+}
+
+.user-settings {
+    position: absolute;
+    right: 0px;
+    margin-right: 5px;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 0px;
+}
+
+.full-width {
+    width: 300px;
+}
+
+#messagelist {
+    height: 80vh;
+    overflow: auto;
+}
+
+.roomlist {
+    height: 80vh;
+    overflow: auto;
+}
+
+#chatbox {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+#messagespace {
+    width: 100%;
+}
+
+.rightAlign {
+    text-align: right;
+}
